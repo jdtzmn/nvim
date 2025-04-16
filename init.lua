@@ -37,3 +37,6 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- colorscheme
+vim.cmd[[colorscheme tokyonight-night]]
