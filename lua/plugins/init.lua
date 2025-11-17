@@ -1,9 +1,20 @@
 return {
   {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+    config = function()
+      require "options"
+    end,
+  },
+  {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    config = function()
+      require "configs.tokyonight"
+    end
   },
   {
     "stevearc/conform.nvim",
@@ -64,5 +75,12 @@ return {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
+  },
+  {
+    "xiyaowong/nvim-transparent",
+    lazy = false,
+    config = function()
+      require "configs.transparent"
+    end,
   }
 }
